@@ -4,7 +4,19 @@ import { bday } from './Data'
 import { FaTrashAlt } from "react-icons/fa";
 
 const Birthday = () => {
-    const [data, setData] = useState( bday )
+    const [data, setData] = useState( bday ) 
+
+
+   const removeData = (id)=>{
+   let newPeople = data.filter((item,index)=>{
+    return item.id !== id
+   })
+
+   setData(newPeople)
+   }
+
+
+
   return (
     <>
     <div className="w-[90%] shadow-blue-500 sm:w-[70%] md:w-[60%] lg:w-[35%] shadow-2xl rounded-md mx-auto p-5 my-5">
@@ -13,7 +25,7 @@ const Birthday = () => {
         </h1>
 
       {data.map((item,index)=>{
-        return <Singlebday {...item} key={index}/>
+        return <Singlebday remove = {removeData} {...item} key={index}/>
       })}
       
       <button onClick={

@@ -3,6 +3,7 @@ import './globals.css'
 import Effect from './effect/Effect'
 import Cleanup from './effect/Cleanup'
 import Birthday from './bday-reminder/Birthday'
+import Api from './apis/Api'
 
 
 const App = () => {
@@ -10,7 +11,8 @@ const App = () => {
     <>
       {/* <Effect/> */}
       {/* <Cleanup/> */}
-      <Birthday/>
+      {/* <Birthday/> */}
+      <Api/>
     </>
   )
 }

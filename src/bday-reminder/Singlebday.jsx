@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaTrashAlt } from "react-icons/fa";
-const Singlebday = ({id,name,img,age}) => {
+const Singlebday = ({id,name,img,age, remove}) => {
   return (
     <>
     <div className="flex justify-between items-center my-3">
@@ -16,8 +16,8 @@ const Singlebday = ({id,name,img,age}) => {
              </div>
         </div>
 
-        <button className='bg-red-500 p-2 rounded-md hover:bg-red-600 cursor-pointer active:scale-90 duration-200 '>
-<FaTrashAlt />
+        <button onClick={()=>remove( id ) } className='bg-red-500 p-2 rounded-md hover:bg-red-600 cursor-pointer active:scale-90 duration-200 '>
+<FaTrashAlt/>
         </button>
     </div>
     </>
