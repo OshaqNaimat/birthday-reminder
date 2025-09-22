@@ -4,6 +4,7 @@ import Effect from './effect/Effect'
 import Cleanup from './effect/Cleanup'
 import Birthday from './bday-reminder/Birthday'
 import Api from './apis/Api'
+import Forms from './controlled_inputs/Forms'
 
 
 const App = () => {
@@ -11,8 +12,9 @@ const App = () => {
     <>
       {/* <Effect/> */}
       {/* <Cleanup/> */}
-      {/* <Birthday/> */}
-      <Api/>
+      <Birthday/>
+      {/* <Api/> */}
+      {/* <Forms/> */}
     </>
   )
 }
