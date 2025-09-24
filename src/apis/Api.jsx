@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Singleuser from './Singleuser'
+// import ScndApi from './ScndApi'
 
 const Api = () => {
 
@@ -9,7 +10,7 @@ const Api = () => {
     const getData = async()=>{
         let response = await fetch(url)
         let data = await response.json()
-        
+            
         setUsers(data)
     }
 
@@ -30,8 +31,12 @@ const Api = () => {
             return <Singleuser {...item} key={index}/>
         })}
         </div>
+
+        {/* second api data fetch */}
+        {/* <ScndApi/> */}
     </>
   )
 }
 
 export default Api
+
